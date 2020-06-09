@@ -11,7 +11,6 @@ class MusicLibraryController
 
     input = ""
 
-    until input == 'exit'
     puts "Welcome to your music library!"
     puts "To list all of your songs, enter 'list songs'."
     puts "To list all of the artists in your library, enter 'list artists'."
@@ -23,7 +22,7 @@ class MusicLibraryController
     puts "What would you like to do?"
 
     input = gets
-
+    until input == 'exit'
       if input == 'list songs'
         list_songs
       elsif input == 'list artists'
@@ -40,6 +39,7 @@ class MusicLibraryController
         exit
       else
         "There is no input for #{input}. Please refer to the top for selections."
+        call
       end
     end
 
@@ -66,7 +66,10 @@ class MusicLibraryController
   end
 
   def list_genres
+    Genre.all.sort { |genre_a, genre_b|
+      genre_a.name <=> genre_b.name
 
+    }
   end
 
 end
