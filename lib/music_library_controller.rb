@@ -46,6 +46,8 @@ class MusicLibraryController
   end
 
   def list_songs
+    # prints all songs in the music library in a numbered list (alphabetized by song name)
+    # is not hard-coded - Need to use a sorting method and compare song A to song B and then loop with an index modifier with the artist, song, and genre in a puts statement.
     Song.all.sort { |song_a, song_b|
       song_a.name <=> song_b.name
     }.map.with_index { |song, index|
@@ -54,6 +56,8 @@ class MusicLibraryController
   end
 
   def list_artists
+    # prints all artists in the music library in a numbered list (alphabetized by artist name)
+    # is not hard-coded - Same as 'list_songs' method but just pass in artist
     Artist.all.sort { |artist_a, artist_b|
       artist_a.name <=> artist_b.name
     }.map.with_index { |artist, index|
