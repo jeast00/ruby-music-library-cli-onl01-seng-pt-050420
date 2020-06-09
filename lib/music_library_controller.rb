@@ -78,7 +78,7 @@ class MusicLibraryController
       song_a.name <=> song_b.name
     }.map.with_index { |song, index|
       if song.artist.name == input
-        puts "#{index}. " + song.name + " - " + song.genre.name
+        puts "#{index+1}. " + song.name + " - " + song.genre.name
       end
     }
   end
