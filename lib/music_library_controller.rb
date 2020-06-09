@@ -75,7 +75,7 @@ class MusicLibraryController
     puts "Please enter the name of an artist:"
     input = gets
     if Artist.find_by_name(input)
-      Song.all.sort { |artist_song_a, artist_song_b|
+      Artist.songs.sort { |artist_song_a, artist_song_b|
         artist_song_a <=> artist_song_b
       }.map.with_index { |artist_song, index|
         puts "#{index+1}. " + song.name + " - " + song.genre.name
