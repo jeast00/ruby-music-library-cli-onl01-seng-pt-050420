@@ -80,7 +80,7 @@ class MusicLibraryController
       if song.artist.name == input
         puts "#{index}. " + song.name + " - " + song.genre.name
       end
-    }
+    }.uniq
   end
 
   def list_songs_by_genre
