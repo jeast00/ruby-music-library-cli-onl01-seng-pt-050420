@@ -103,7 +103,9 @@ class MusicLibraryController
         song_a.name <=> song_b.name
       }
     end
-
+    if played_song
+      puts "Playing " + played_song.name + " by " + played_song.artist.name
+    end
   end
 
 end
