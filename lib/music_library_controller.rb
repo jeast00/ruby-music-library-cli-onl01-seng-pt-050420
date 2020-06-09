@@ -77,7 +77,9 @@ class MusicLibraryController
     Song.all.sort { |song_a, song_b|
       song_a.name <=> song_b.name
     }.map.with_index { |song, index|
-      if song.artist.name == input
+      if song.artist.name != input
+
+      else
         puts "#{index+1}. " + song.name + " - " + song.genre.name
       end
     }
