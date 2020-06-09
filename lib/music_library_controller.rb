@@ -66,7 +66,8 @@ class MusicLibraryController
   def list_genres
     Genre.all.sort { |genre_a, genre_b|
       genre_a.name <=> genre_b.name
-
+    }.map.with_index { |genre, index| 
+      puts "#{index+1}. " + genre.name
     }
   end
 
