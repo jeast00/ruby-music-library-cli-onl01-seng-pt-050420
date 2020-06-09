@@ -78,7 +78,7 @@ class MusicLibraryController
       artist_name.songs.sort { |artist_song_a, artist_song_b|
         artist_song_a.name <=> artist_song_b.name
       }.map.with_index { |artist_song, index|
-        puts "#{index+1}. " + song.name + " - " + song.genre.name
+        puts "#{index+1}. " + artist_song.name + " - " + artist_song.genre.name
       }
     end
   end
