@@ -43,7 +43,7 @@ class MusicLibraryController
   end
 
   def list_songs
-
+    songs.sort.with_index(1) {|song, index| puts "#{}"}
   end
 
 end
