@@ -92,6 +92,7 @@ class MusicLibraryController
       }.map.with_index { |genre_song, index|
         puts "#{index+1}. " + genre_song.artist.name + " - " + genre_song.name
       }
+    end
   end
 
   def play_song
