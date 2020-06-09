@@ -74,15 +74,7 @@ class MusicLibraryController
   def list_songs_by_artist
     puts "Please enter the name of an artist:"
     input = gets
-    Song.all.sort { |song_a, song_b|
-      song_a.name <=> song_b.name
-    }.map.with_index { |song, index|
-      if song.artist.name != input
 
-      else
-        puts "#{index+1}. " + song.name + " - " + song.genre.name
-      end
-    }
   end
 
   def list_songs_by_genre
