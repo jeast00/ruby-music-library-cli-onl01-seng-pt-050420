@@ -81,4 +81,8 @@ class MusicLibraryController
     input = gets
   end
 
+  def play_song
+
+  end
+
 end
