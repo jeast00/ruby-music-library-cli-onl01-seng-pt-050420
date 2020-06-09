@@ -74,6 +74,11 @@ class MusicLibraryController
   def list_songs_by_artist
     puts "Please enter the name of an artist:"
     input = gets
+    Song.all.sort
+  end
+
+  def list_songs_by_genre
+
   end
 
 end
