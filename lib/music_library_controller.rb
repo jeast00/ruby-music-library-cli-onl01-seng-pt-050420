@@ -20,6 +20,26 @@ class MusicLibraryController
 
     input = gets
 
+    until input == 'exit'
+      if input == 'list songs'
+        list_songs
+      elsif input == 'list artists'
+        list_artists
+      elsif input == 'list genres'
+        list_genres
+      elsif input == 'list artist'
+        list_songs_by_artist
+      elsif input == 'list genre'
+        list_songs_by_genre
+      elsif input == 'play song'
+        play_song
+      elsif input == 'exit'
+        exit
+      else
+        "There is no input for #{input}. Please refer to the top for selections."
+      end
+    end
+
   end
 
 end
