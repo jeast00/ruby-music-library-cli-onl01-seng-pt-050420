@@ -46,15 +46,19 @@ class MusicLibraryController
   end
 
   def list_songs
-    Song.all.sort{ |song_a, song_b|
+    Song.all.sort { |song_a, song_b|
       song_a.name <=> song_b.name
-    }.map.with_index {|song, index|
+    }.map.with_index { |song, index|
       puts "#{index+1}. " + song.artist.name + " - " + song.name + " - " + song.genre.name
     }
   end
 
   def list_artists
-
+    Artist.all.sort { |artist_a, artist_b|
+      artist_a.name <=> artist_b.name
+    }.map.with_index { |artist, index|
+      puts "#{index+1}. " + artist.name
+    }
   end
 
 end
