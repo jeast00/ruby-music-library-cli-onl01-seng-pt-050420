@@ -102,7 +102,7 @@ class MusicLibraryController
     if range.include?(input)
       played_song = Song.all.sort { |song_a, song_b|
         song_a.name <=> song_b.name
-      }
+      }[input - 1]
     end
     if played_song
       puts "Playing " + played_song.name + " by " + played_song.artist.name
